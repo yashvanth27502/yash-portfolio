@@ -16,10 +16,10 @@ const Home = () => {
             Hello I&apos;m <br/> <span className="text-accent">Yashvanth</span>
           </h1>
           <span className="text-md capitalize">Your Expert in Crafting Elegant Digital Experiences</span>
-          <p className="max-w-[500px] mb-9 text-white/80">I am a graphic designer with over a year of experience, specializing in <b>Logo Design, Graphic Design and UI Design</b> that elevate brands through refined and visually compelling digital solutions. Proficient in various programming languages and advanced design tools, I ensure that each project aligns with the unique identity of my clients.</p>
+          <p className="max-w-[500px] mb-9 text-white/80">I am a graphic designer with over a year of experience, specializing in <b className="text-accent">Logo Design, Graphic Design and UI Design</b> that elevate brands through refined and visually compelling digital solutions. Proficient in various programming languages and advanced design tools, I ensure that each project aligns with the unique identity of my clients.</p>
           {/* buttons and Socials */}
           <div className="flex flex-col xl:flex-row items-center gap-8">
-          <Link href="/Yashvanth_Resume.pdf" target="_blank" rel="noopener noreferrer" download>
+        <Link href="/assets/Yashvanth_Resume.pdf" target="_blank" rel="noopener noreferrer" download>
               <Button variant="outline" size="lg" className="h-16 uppercase flex items-center gap-2">
                 <span> Download CV</span>
                 <FiDownload className="text-xl" />
