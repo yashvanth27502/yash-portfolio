@@ -6,7 +6,7 @@ import React, {useState} from "react"
 import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 
-import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
+import { BsArrowUpRight, BsDribbble } from 'react-icons/bs';
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
@@ -17,13 +17,13 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 const projects = [
   {
     num: '01',
-    category: 'frontend',
+    category: 'Paginated Banner About Animal',
     title: 'project 1',
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis nulla et doloremque error aut dignissimos veniam consectetur ratione in.',
-    stack: [{name: "Html 5"}, {name: "Css 3"}, {name: "Javascript"}],
-    image: '/assets/work/thumb1.png',
-    live: "",
-    github: "",
+    description: (<>The Paginated Banner About Animals project is designed to enhance user engagement through an interactive, paginated banner that showcases various <a className="text-accent" href='https://en.wikipedia.org/wiki/Wildlife'>wildlife</a> facts, <a className="text-accent" href='https://kids.nationalgeographic.com/animals'>animal species</a>, and nature photography. With a clean and intuitive paginated design, users can easily navigate through animal information without clutter. Each slide features high-quality images, detailed descriptions, and interesting facts about different animal species, from exotic wildlife to endangered species, making it perfect for educational websites, nature blogs, and animal conservation platforms. This project is built to optimize user experience while supporting search engine optimization (SEO) goals. By combining responsive design, fast load times, and mobile compatibility, it delivers a seamless browsing experience across devices, encouraging longer site visits and boosting SEO metrics. With relevant keywords like wildlife exploration, animal facts, and interactive animal banners, this banner project is crafted to attract organic traffic, helping nature enthusiasts and educational content seekers find engaging information about the animal kingdom.</>),
+    stack: [{name: "Figma"}, {name: "Photoshop"}],
+    image: '/assets/work/thumb1.jpg',
+    live: "https://www.figma.com/proto/AmAVymtDxj8KgAMKQ72NlT/animal-slider-yashvanth?page-id=88%3A46&node-id=88-47&node-type=frame&viewport=459%2C398%2C0.22&t=hosfJkddQzBos0KT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A47&show-proto-sidebar=1",
+    dribbble: "https://dribbble.com/shots/24389173-Paginated-Banner-About-Animal?utm_source=Clipboard_Shot&utm_campaign=Yashvanth&utm_content=Paginated%20Banner%20About%20Animal&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Yashvanth&utm_content=Paginated%20Banner%20About%20Animal&utm_medium=Social_Share",
   },
   {
     num: '02',
@@ -33,7 +33,7 @@ const projects = [
     stack: [{name: "Next.js"}, {name: "Tailwind.css"}, {name: "Node.js"}],
     image: '/assets/work/thumb2.png',
     live: "",
-    github: "",
+    dribbble: "",
   },
   {
     num: '03',
@@ -43,7 +43,7 @@ const projects = [
     stack: [{name: "Next.js"  }, {name: "Tailwind.css"}],
     image: '/assets/work/thumb3.png',
     live: "",
-    github: "",
+    dribbble: "",
   },
 ]
 
@@ -82,7 +82,7 @@ const Work = () => {
                 {/* border */}
                 <div className='border border-white/20'></div>
                 {/* buttons */}
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center gap-4 pb-8'>
                   {/* live project button */}
                   <Link href={project.live}>
                     <TooltipProvider delayDuration={100}>
@@ -96,15 +96,15 @@ const Work = () => {
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
-                  {/* github project button */}
-                  <Link href={project.github}>
+                  {/* dribbble project button */}
+                  <Link href={project.dribbble}>
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
-                          <BsGithub className='text-white text-3xl group-hover:text-accent' />
+                          <BsDribbble className='text-white text-3xl group-hover:text-accent' />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Github Project</p>
+                          <p>Dribbble Project</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
